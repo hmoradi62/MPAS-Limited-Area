@@ -549,7 +549,7 @@ class LimitedArea():
         arg = np.dot(b, c) / np.linalg.norm(b) / np.linalg.norm(c)
         arg = max(-1.0,min(1.0, arg))
         theta = math.acos(arg)
-        if np.cross([bx - ax, by - ay], [cx - ax, cy - ay]) < 0.0:
+        if ((bx - ax) * (cy - ay) - (by - ay) * (cx - ax)) < 0.0:
             theta = -theta
 
         return theta

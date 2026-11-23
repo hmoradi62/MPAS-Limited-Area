@@ -1,0 +1,22 @@
+MPAS NETWORK / GEOMETRIC NORMAL COMPARISON
+======================================================================
+Input rows: 207
+Successful: 207
+Failed: 0
+Physical Mask-7 edges: 277
+
+SUMMARY STATISTICS
+csv_network_path_width_km: n=207, mean=811.726, median=807.084, min=766.158, max=887.917
+network_inner_mid_to_outer_edge_mid_km: n=207, mean=784.896, median=788.338, min=672.674, max=884.643
+normal_width_km: n=207, mean=1051.099, median=864.081, min=767.367, max=3505.547
+normal_minus_network_midpoint_km: n=207, mean=266.204, median=80.789, min=-0.013, max=2701.556
+normal_minus_csv_path_width_km: n=207, mean=239.373, median=33.728, min=-54.798, max=2677.620
+boundary_exit_separation_km: n=207, mean=578.981, median=495.096, min=0.000, max=3052.821
+normal_vs_network_vector_angle_deg: n=207, mean=29.957, median=34.849, min=0.000, max=64.198
+
+Normal ray intersects CSV outer edge: 80/207
+
+SAMPLE EDGES
+Edge 769: network edge=46, normal edge=14, network chord=745.877 km, normal=811.053 km, exit separation=790.611 km, angle=60.99 deg, ray intersects CSV edge=False
+Edge 777: network edge=56, normal edge=19, network chord=746.331 km, normal=800.299 km, exit separation=768.432 km, angle=59.58 deg, ray intersects CSV edge=False
+Edge 828: network edge=100, normal edge=127, network chord=785.044 km, normal=3486.600 km, exit separation=3008.933 km, angle=47.69 deg, ray intersects CSV edge=False

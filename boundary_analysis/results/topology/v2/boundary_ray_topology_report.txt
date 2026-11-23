@@ -1,0 +1,54 @@
+========================================================================
+MPAS TOPOLOGY-AWARE NORMAL RAY TRACING REPORT
+========================================================================
+Input rays: 207
+Physical Mask-7 boundary edges: 277
+
+STATUS COUNTS
+------------------------------------------------------------------------
+NON_MONOTONIC: 24
+NON_UNIFORM: 90
+VALID: 93
+
+VALIDATION SUMMARY
+------------------------------------------------------------------------
+VALID (exact 1-2-3-4-5-6-7): 93
+NON_UNIFORM (connected, monotonic but not exact): 90
+NON_MONOTONIC: 24
+BOUNDARY_EXIT: 207
+NO_HIT: 0
+VERTEX_AMBIGUITY: 0
+Same edge as global nearest hit: 207/207
+Same edge as CSV network exit: 80/207
+
+VALID WIDTH STATISTICS (km)
+------------------------------------------------------------------------
+n=93
+mean=809.669
+median=805.874
+min=767.367
+max=883.250
+
+SAMPLE RAYS
+------------------------------------------------------------------------
+Edge 769: status=VALID, masks=1-2-3-4-5-6-7, topology_exit_edge=14, topology_width_km=811.0529331903705, global_edge=14, global_width_km=811.0529331903705, CSV_edge=46, error=
+  cells: 145;796;68;793;239;536;25
+Edge 777: status=NON_UNIFORM, masks=1-2-3-4-5-6-7-7, topology_exit_edge=19, topology_width_km=800.2990166194148, global_edge=19, global_width_km=800.2990166194148, CSV_edge=56, error=
+  cells: 1105;1108;791;792;1386;1387;240;537
+Edge 828: status=NON_MONOTONIC, masks=1-1-1-1-2-1-2-1-2-2-2-3-3-2-3-2-3-3-3-4-3-3-4-4-4-5-4-4-4-5-4-5-5-5-6-6-6-7, topology_exit_edge=127, topology_width_km=3486.599680084352, global_edge=127, global_width_km=3486.599680084352, CSV_edge=100, error=
+  cells: 1107;1109;797;798;365;1122;1124;1123;151;1126;152;685;684;1483;321;1482;702;53;699;1487;1485;926;1393;242;1392;539;241;1389;1403;758;757;62;755;133;1075;428;429;135
+
+METHODOLOGICAL NOTES
+------------------------------------------------------------------------
+1. The normal direction was not adjusted; it was oriented toward the Mask-1 start cell.
+2. Cell transitions use cellsOnEdge. Only edges incident to the current cell are considered.
+3. A boundary exit is accepted only when the current cell is Mask 7.
+4. Exact VALID status requires the complete sequence 1-2-3-4-5-6-7.
+5. Vertex ties are flagged as VERTEX_AMBIGUITY rather than resolved arbitrarily.
+6. The ray origin is the midpoint of the projected inner-edge segment,
+   ensuring the starting edge is exactly at t=0.
+7. Geometry is evaluated in a local AEQD projection centered near each inner edge.
+6. Geometry is evaluated in a local AEQD projection centered near each inner edge.
+   Projection distortion may become important for unusually long rays; inspect long paths separately.
+
+CSV output: boundary_ray_topology.csv

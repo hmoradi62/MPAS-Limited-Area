@@ -1,0 +1,19 @@
+MPAS GEOMETRIC BOUNDARY WIDTH ANALYSIS
+============================================================
+
+Inner edges: 207
+Physical boundary edges: 277
+Successful: 207
+Failed: 0
+
+GEOMETRIC WIDTH STATISTICS
+----------------------------------------
+Minimum: 767.3670 km
+Median: 864.0810 km
+Mean: 1051.0994 km
+Maximum: 3505.5472 km
+
+NETWORK COMPARISON
+----------------------------------------
+Mean absolute difference: 241.6015 km
+Mean absolute percentage difference: 29.73%

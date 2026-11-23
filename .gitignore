@@ -7,3 +7,42 @@
 build/
 dist
 __pycache__/
+
+# Python environments
+.venv/
+venv/
+
+# GFS input data
+/Data/
+/Data_GFS_*/
+/wps_gfs_*/
+
+# MPAS run outputs
+/run_*/
+
+# Generated NetCDF and GRIB files
+*.nc
+*.grib
+*.grb
+*.grb2
+*.grib2
+
+# Generated logs and temporary files
+/*.log
+/*.out
+/*.err
+/*.abort
+*.tmp
+*.part.*
+
+# Generated analysis products in project root
+/*.csv
+/*.png
+/*.pdf
+/*.graph.info*
+
+# Backup files
+*.bak
+
+# Cartopy Natural Earth datasets
+limited_area/ne_110m_*/
